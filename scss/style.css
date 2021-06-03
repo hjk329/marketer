@@ -1,3 +1,72 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+* {
+  box-sizing: border-box; }
+
+a {
+  text-decoration: none; }
+
+img {
+  max-width: 100%;
+  vertical-align: top; }
+
+* {
+  list-style: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both; }
+
 .container {
   max-width: 1180px;
   margin: 0 auto; }
@@ -9,13 +78,13 @@
 .grid-item {
   width: 33.3333%;
   padding: 15px; }
+  @media screen and (max-width: 992px) {
+    .grid-item {
+      width: 50%; } }
+  @media screen and (max-width: 768px) {
+    .grid-item {
+      width: 100%; } }
 
-@media (max-width: 992px) {
-  .grid-item {
-    width: 50%; } }
-@media (max-width: 768px) {
-  .grid-item {
-    width: 100%; } }
 .top-header {
   background: #343434; }
   .top-header .container {
@@ -423,27 +492,42 @@
     margin-bottom: 20px; }
   .process .grid-item {
     text-align: center;
-    width: 25%;
-    padding: 15px; }
+    width: 25%; }
     .process .grid-item .item {
-      position: relative; }
+      position: relative;
+      border: 3px dashed #aaa;
+      border-radius: 50%;
+      padding: 4px;
+      overflow: hidden; }
+      .process .grid-item .item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%; }
       .process .grid-item .item .screen {
         position: absolute;
-        top: 50px;
+        top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        opacity: 0; }
+        opacity: 0;
+        background: rgba(255, 255, 255, 0.4);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.3s; }
         .process .grid-item .item .screen:hover {
           opacity: 1; }
-          .process .grid-item .item .screen:hover img {
-            opacity: 0.1; }
-      .process .grid-item .item .desc {
-        margin-top: 20px;
-        text-transform: capitalize;
-        font-weight: 700;
-        color: #454545;
-        font-size: 18px; }
+        .process .grid-item .item .screen p {
+          font-size: 14px;
+          text-align: center;
+          padding: 0 15px; }
+    .process .grid-item .desc {
+      margin-top: 20px;
+      text-transform: capitalize;
+      font-weight: 700;
+      color: #454545;
+      font-size: 18px; }
 
 .email {
   background: #3498db;
