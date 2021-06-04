@@ -1,5 +1,8 @@
 .top-header{
   background: #343434;
+  @include screen-md{
+    display: none;
+  }
   .container{
     display: flex;
     justify-content: space-between;
@@ -60,6 +63,9 @@
 
     nav{
       display: flex;
+      @include screen-md{
+        display: none;
+      }
       .nav-link{
         display: flex;
         align-items: center;
@@ -76,5 +82,32 @@
         }
       }
     }
+    .burger{
+      display: none;
+      border: 1px solid #888;
+      border-radius: 5px;
+
+      &:hover{
+        background:rgba(0,0,0,0.1);
+      }
+
+      @include screen-md{
+        display: block;
+        width: 40px;
+        height: 40px;
+      }
+      .line{
+        display: none;
+        @include screen-md{
+          display: block;
+          width: 25px;
+          height: 5px;
+          border-bottom: 3px solid #888;
+          margin: 5px auto;
+        }
+      }
+
+    }
+
   }
 }

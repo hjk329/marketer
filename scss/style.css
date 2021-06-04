@@ -87,6 +87,9 @@ img {
 
 .top-header {
   background: #343434; }
+  @media screen and (max-width: 992px) {
+    .top-header {
+      display: none; } }
   .top-header .container {
     display: flex;
     justify-content: space-between; }
@@ -130,6 +133,9 @@ img {
       width: 170px; }
     .main-header .container nav {
       display: flex; }
+      @media screen and (max-width: 992px) {
+        .main-header .container nav {
+          display: none; } }
       .main-header .container nav .nav-link {
         display: flex;
         align-items: center;
@@ -141,6 +147,26 @@ img {
           color: #3498db; }
         .main-header .container nav .nav-link i {
           margin-left: 5px; }
+    .main-header .container .burger {
+      display: none;
+      border: 1px solid #888;
+      border-radius: 5px; }
+      .main-header .container .burger:hover {
+        background: rgba(0, 0, 0, 0.1); }
+      @media screen and (max-width: 992px) {
+        .main-header .container .burger {
+          display: block;
+          width: 40px;
+          height: 40px; } }
+      .main-header .container .burger .line {
+        display: none; }
+        @media screen and (max-width: 992px) {
+          .main-header .container .burger .line {
+            display: block;
+            width: 25px;
+            height: 5px;
+            border-bottom: 3px solid #888;
+            margin: 5px auto; } }
 
 .visual {
   background: #3498db; }
@@ -181,6 +207,9 @@ img {
       text-align: right; }
       .visual .container .image img {
         width: 100%; }
+      @media screen and (max-width: 992px) {
+        .visual .container .image {
+          display: none; } }
 
 .sponsors {
   background: #f6f7f8; }
@@ -233,7 +262,8 @@ img {
   background: #f6f7f8; }
   .video_faq .container {
     display: flex;
-    padding: 90px 0; }
+    padding: 90px 0;
+    flex-wrap: wrap; }
     .video_faq .container .video {
       flex: 1; }
     .video_faq .container .faq {

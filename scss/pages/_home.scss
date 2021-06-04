@@ -44,6 +44,10 @@
       img{
         width: 100%;
       }
+
+      @include screen-md{
+        display: none;
+      }
     }
   }
 }
@@ -120,6 +124,7 @@
   .container{
     display: flex;
     padding : 90px 0;
+    flex-wrap: wrap;
 
     .video{
       flex: 1;
