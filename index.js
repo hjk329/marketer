@@ -21,3 +21,7 @@ document.querySelector(".faq-3").addEventListener('click', function(){
         document.querySelector('.faq-3 .answer').style.display ='none';
     }
 });
+
+// document.querySelector('.faq-2').addEventListener('click', function(event){
+//     event.target.nextSibling.classList.toggle('isActive')
+// })
